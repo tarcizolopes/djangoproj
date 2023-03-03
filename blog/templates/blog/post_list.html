@@ -6,17 +6,12 @@
         <div>
             <h1><a href="/">As Galáxias</a></h1>
         </div>
-
-        <div>
-            <p>publicado: 02/03/2023, 12:14</p>
-            <h2><a href="">Meu primeiro post</a></h2>
-            <p>e começo aqui e meço aqui este começo e recomeço e remeço e arremesso e aqui me meço quando se vive sob a espécie da viagem o que importa não é a viagem mas o começo da por isso meço por isso começo escrever mil páginas escrever milumapáginas para acabar com a escritura para começar com a escritura para acabarcomeçar com a escritura por isso recomeço por isso arremeço por isso teço escrever sobre escrever é o futuro do escrever sobrescrevo sobrescravo em milumanoites milumapáginas ou uma página em uma noite que é o mesmo noites e páginas mesmam ensimesmam onde o fim é o comêço onde escrever sobre o escrever é não escrever sobre não escrever e por isso começo descomeço pelo descomêço desconheço.</p>
-        </div>
-
-        <div>
-            <p>publicado: 02/03/2023, 12:14</p>
-            <h2><a href="">Meu segundo post</a></h2>
-            <p>e me teço um livro onde tudo seja fortuito e forçoso um livro onde tudo seja não esteja seja um umbigodomundolivro um umbigodolivromundo um livro de viagem onde a viagem seja o livro o ser do livro é a viagem por isso começo pois a viagem é o começo e volto e revolto pois na volta recomeço reconheço remeço um livro é o conteúdo do livro e cada página de um livro é o conteúdo do livro e cada linha de uma página e cada palavra de uma linha é o conteúdo da palavra da linha da página do livro um livro ensaia o livro todo livro é um livro de ensaio de ensaios do livro por isso o fimcomêço começa e fina recomeça e refina se afina o fim no funil do começo afunila o começo no fuzil do fim no fim do fim recomeça o recomeço refina o refino do fim e onde fina começa e se apressa e regressa e retece há milumaestórias na mínima unha de estória por isso não conto por isso não canto por isso a nãoestória me desconta ou me descanta o avesso da estória</p>
-        </div>
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
     </body>
 </html>
